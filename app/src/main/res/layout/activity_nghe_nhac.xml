@@ -7,7 +7,7 @@
     android:orientation="horizontal"
     android:gravity="center"
     android:layout_weight="5"
-    tools:context="com.example.jonel.appzing.main.NgheNhac">
+    tools:context="com.example.jonel.appzing.model.NgheNhac">
     <ImageView
         android:id="@+id/iv_image"
         android:layout_weight="4"

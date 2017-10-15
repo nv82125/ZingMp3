@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="4dp"
-                android:text="tittle sing"
+                android:text="Tên bài hát"
                 android:textColor="@color/colorDen"
                 android:singleLine="true"
                 android:textSize="20dp" />
@@ -43,12 +43,25 @@
                     android:id="@+id/artist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ten ca si"
+                    android:text="Tên ca sĩ"
                     android:textSize="16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" - " />
+                <TextView
+                    android:id="@+id/album"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="album" />
             </TableRow>
 
         </LinearLayout>
-
+        <ImageButton
+            android:id="@+id/ib_tuy_chon"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:background="@drawable/icon_3cham" />
     </TableRow>
 
     <View

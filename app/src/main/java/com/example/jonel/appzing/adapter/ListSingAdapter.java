@@ -1,4 +1,4 @@
-package com.example.jonel.appzing.main;
+package com.example.jonel.appzing.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,11 +7,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.jonel.appzing.model.AudioPlayer;
 import com.example.jonel.appzing.R;
 
 import java.util.List;
 
-public class ListSingAdapter extends BaseAdapter {    private static final String TAG = ListSingAdapter.class.getSimpleName();
+public class ListSingAdapter extends BaseAdapter {
+    private static final String TAG = ListSingAdapter.class.getSimpleName();
     private List<AudioPlayer> audioPlayers;
 
     private Context context;
@@ -48,7 +50,7 @@ public class ListSingAdapter extends BaseAdapter {    private static final Strin
             convertView=layoutInflater.inflate(R.layout.item_baihat,parent,false);
             hollerView=new HollerView();
             hollerView.tvTenBaiHat= convertView.findViewById(R.id.title); //ep kieu  (TextView)
-//            hollerView.tvAlbum= convertView.findViewById(R.id.album); //(TextView)
+            hollerView.tvAlbum= convertView.findViewById(R.id.album); //(TextView)
             hollerView.tvTenCaSi= convertView.findViewById(R.id.artist); //(TextView)
             convertView.setTag(hollerView);
         }else {
@@ -57,7 +59,7 @@ public class ListSingAdapter extends BaseAdapter {    private static final Strin
         AudioPlayer audioPlayer= (AudioPlayer) getItem(position);
         hollerView.tvTenCaSi.setText(audioPlayer.getTenCS());
         hollerView.tvTenBaiHat.setText(audioPlayer.getTitle());
-//        hollerView.tvAlbum.setText(audioPlayer.getAlbum());
+        hollerView.tvAlbum.setText(audioPlayer.getAlbum());
 
         return convertView;
     }

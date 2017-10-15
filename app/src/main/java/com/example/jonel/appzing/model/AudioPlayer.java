@@ -1,4 +1,4 @@
-package com.example.jonel.appzing.main;
+package com.example.jonel.appzing.model;
 
 /**
  * Created by jonel on 10/12/2017.
